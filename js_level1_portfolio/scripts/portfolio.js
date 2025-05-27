@@ -13,69 +13,38 @@ thumbNailA[0].addEventListener('click', function(){
     console.log(this.children[0].src);
     console.log(popupBg.children[0].children[0].src);
     //noneImgTag.src = 'this.children[0].src';
-    popupShow();//팝업 출력 함수 호출
-    popupBg.children[0].children[0].src = this.children[0].src;
+    popupShow(this);//팝업 출력 함수 호출
 });
 thumbNailA[1].addEventListener('click', function(){
-    popupShow();
-    popupBg.children[0].children[0].src = this.children[0].src;
+    popupShow(this);
 });
 thumbNailA[2].addEventListener('click', function(){
-    popupShow();
-    popupBg.children[0].children[0].src = this.children[0].src;
+    popupShow(this);
 });
 thumbNailA[3].addEventListener('click', function(){
-    popupShow();
-    popupBg.children[0].children[0].src = this.children[0].src;
+    popupShow(this);
 });
 thumbNailA[4].addEventListener('click', function(){
-    popupShow();
-    popupBg.children[0].children[0].src = this.children[0].src;
+    popupShow(this);
 });
 thumbNailA[5].addEventListener('click', function(){
-    popupShow();
-    popupBg.children[0].children[0].src = this.children[0].src;
+    popupShow(this);
+
 });
 thumbNailA[6].addEventListener('click', function(){
-    popupShow();
-    popupBg.children[0].children[0].src = this.children[0].src;
+    popupShow(this);
+
 });
 thumbNailA[7].addEventListener('click', function(){
-    popupShow();
-    popupBg.children[0].children[0].src = this.children[0].src;
+    popupShow(this);
 });
-function popupShow(){
-    //noneImgTag.src = 'images/project_001.jpg';
-    return popupBg.style.display = 'flex';
+function popupShow(target){
+    console.log('------------------------------------함수시작위치와 에러체크');
+    // console.log(this.children[0]); // 정상체크
+    popupBg.style.display = 'flex';
+    popupBg.children[0].children[0].src = target.children[0].src;
+    return; // 함수 종료
 }
-/* function popupShow1(){
-    noneImgTag.src = 'images/project_002.jpg';
-    return popupBg.style.display = 'flex';
-}
-function popupShow2(){
-    noneImgTag.src = 'images/project_003.png';
-    return popupBg.style.display = 'flex';
-}
-function popupShow3(){
-    noneImgTag.src = 'images/project_004.jpg';
-    return popupBg.style.display = 'flex';
-}
-function popupShow4(){
-    noneImgTag.src = 'images/project_005.jpg';
-    return popupBg.style.display = 'flex';
-}
-function popupShow5(){
-    noneImgTag.src = 'images/project_006.jpg';
-    return popupBg.style.display = 'flex';
-}
-function popupShow6(){
-    noneImgTag.src = 'images/project_007.jpg';
-    return popupBg.style.display = 'flex';
-}
-function popupShow7(){
-    noneImgTag.src = 'images/project_008.jpg';
-    return popupBg.style.display = 'flex';
-} */
 // 3. (팝업 실행 기준) 배경클릭 시 팝업 숨기기
 popupBg.addEventListener('click',closePopup);
 function closePopup(){
