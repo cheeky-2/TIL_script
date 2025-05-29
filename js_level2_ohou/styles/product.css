@@ -1,8 +1,11 @@
+body, html {scroll-behavior:smooth;}
 main {
     background-color:aqua;
     width:995px; margin:0 auto;
 }
-main .path {margin-bottom:26px; font-size:0.875rem;}
+main .path {margin:123px 0 26px;}
+main .path a {font-size:0.875rem;}
+main .path span {}
 main section {
     display:grid;
     grid-template-columns:630px 341px;
@@ -21,7 +24,7 @@ main section .right_order {background-color:lime;}
 main section .right_order > * {margin-bottom:25px; background-color:yellow;}
 main section .right_order .brand {font-size:0.875rem;}
 main section .right_order h1 {font-size:1.313rem;}
-main section .right_order .review {font-size:0.813rem; display:block;}
+main section .right_order .review {font-size:0.813rem; display:block; height:max-content;}
 main section .right_order .review .score {}
 main section .right_order .review .score em {}
 main section .right_order .review .num {}
@@ -55,3 +58,6 @@ main section .right_order .btn_group {display:flex; justify-content:space-betwee
 main section .right_order .btn_group * {width:165.5px; height:57px; border-radius:5px; border:1px solid #59afff; font-size:1.063rem;}
 main section .right_order .btn_group #cart_btn {color:#59afff; background-color:#fff;}
 main section .right_order .btn_group #buy_btn {color:#fff; background-color:#59afff;}
+main .info {height:100vh;}
+main .review {height:100vh; background-color:greenyellow;}
+main .board {height:100vh;}
