@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS 복습</title>
+    <link rel="stylesheet" href="../js_level2_ohou/styles/reset.css">
+    <style>
+        #bg {background:url(https://i.pinimg.com/736x/c4/37/57/c43757277d812fcf8a87c866944616b3.jpg) no-repeat center/cover; width:100%; height:250vh;}
+        #bg .gradient {background: #ff0000;
+            background: linear-gradient(360deg, rgba(255, 0, 0, 1) 0%, rgba(255, 170, 43, 1) 19%, rgba(244, 255, 31, 1) 32%, rgba(0, 171, 37, 1) 47%, rgba(0, 96, 214, 1) 63%, rgba(3, 0, 158, 1) 80%, rgba(107, 0, 161, 1) 100%); width:100%; height:100%; opacity:0.5;/* 자식, 자손 영향 */}
+        #bg .gradient section {
+            /* a, b 두개의 요소를 grid로 정렬하고 싶다면 그 부모(section)에게 명령 */
+            display:grid;/* 그리드 필수 선언 */
+            /* grid-template-columns:100px 200px; *//* 1열, 2열 순서대로 자식 너비지정 */
+            /* grid-template-columns:repeat(2, minmax(200px, auto)); */
+            grid-template-columns:200px 1fr;
+            /* 1열 2열 반복(repeat)적용 최소(min) 200, 최대(max) auto 100% 같이 인식한다. */
+            /* grid-template-rows:300px 100px; *//* 1행 자식의 높이지정 */ /* 1행 300, 2행 100 자식의 높이지정 */
+            grid-template-rows:repeat(2,100px); /* 2행 100px반복 */
+        }
+        #bg .gradient section > div{
+            /* width:100px; */ /* height:100px; */
+            /* 부모에 grid로 열,행 크기 입력 시 자식에는 별도로 크기를 입력하면 안된다. */
+            border:5px solid #fff;
+        }
+        #bg .gradient section .a {}
+        #bg .gradient section .b {}
+        #bg .gradient section > div svg {width:24px;}
+        .box {
+            display:grid;
+            grid-template-areas:
+            'list1 list2'
+            'list3 list4'
+            'list5 list6';
+            grid-template-rows:100px 100px 100px;
+            grid-template-columns:100px 100px 100px;
+            gap:10px 20px;
+        }
+        .box li {border:2px solid #000; text-align:center; line-height:100px;}
+        .box li:nth-child(1) {grid-area:list1}
+        .box li:nth-child(2) {grid-area:list2}
+        .box li:nth-child(3) {grid-area:list3}
+        .box li:nth-child(4) {grid-area:list4}
+        .box li:nth-child(5) {grid-area:list5}
+        .box li:nth-child(6) {grid-area:list6}
+    </style>
+</head>
+<body>
+    <ul class="box">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+    </ul>
+    <div id="bg">
+        <div class="gradient">
+            <section>
+                <div class="a">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"/></svg>
+                </div>
+                <div class="b">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M248 8C111 8 0 119 0 256s111 248 248 248 248-111 248-248S385 8 248 8zm0 96c48.6 0 88 39.4 88 88s-39.4 88-88 88-88-39.4-88-88 39.4-88 88-88zm0 344c-58.7 0-111.3-26.6-146.5-68.2 18.8-35.4 55.6-59.8 98.5-59.8 2.4 0 4.8 .4 7.1 1.1 13 4.2 26.6 6.9 40.9 6.9 14.3 0 28-2.7 40.9-6.9 2.3-.7 4.7-1.1 7.1-1.1 42.9 0 79.7 24.4 98.5 59.8C359.3 421.4 306.7 448 248 448z"/></svg>
+                </div>
+                <div class="c">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M462.3 62.6C407.5 15.9 326 24.3 275.7 76.2L256 96.5l-19.7-20.3C186.1 24.3 104.5 15.9 49.7 62.6c-62.8 53.6-66.1 149.8-9.9 207.9l193.5 199.8c12.5 12.9 32.8 12.9 45.3 0l193.5-199.8c56.3-58.1 53-154.3-9.8-207.9z"/></svg>
+                </div>
+                <!-- <div class="d"></div> -->
+            </section>
+        </div>
+    </div>
+</body>
+</html>

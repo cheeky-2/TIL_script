@@ -1,0 +1,14 @@
+#wrap {
+    background:url(https://i.pinimg.com/736x/c4/37/57/c43757277d812fcf8a87c866944616b3.jpg) no-repeat top / cover;
+    min-width:320px; max-width:480px; height:100vh;
+    margin:0 auto; text-align:center;
+    padding:230px 15px;
+}
+#wrap .user_info{margin-bottom:200px;}
+#wrap .user_info input {width:70px; border-radius:10px; text-align:center;}
+#wrap .user_info em {color:#fff; font-size:1.063rem;}
+#wrap #output_btn {background-color:#aaa; font-size:1.25rem; margin-bottom:90px; padding:15px 25px; border-radius:15px;}
+#wrap p {background-color:#555; font-size:1.5rem; padding:15px 30px; border-radius:15px; line-height:1.3;}
+#wrap p .month {}
+#wrap p .flower {}
+#wrap p .flower_meaning {}
