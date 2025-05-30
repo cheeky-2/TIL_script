@@ -48,8 +48,21 @@ main section .right_order .product_option {
 main section .right_order .product_option > * {border-radius:5px; border:1px solid #59afff; font-size:0.875rem; outline:none; line-height:44px; padding-left:17px;}
 main section .right_order .product_option select[name=color] {margin-bottom:25px;}
 main section .right_order .product_option select[name=color] option {}
+main section .right_order .product_option select[name=color] option:nth-child(4) {color:#999;}
 main section .right_order .product_option select[name=size] {}
 main section .right_order .product_option select[name=size] option {}
+main section .right_order .order_select {background-color:#eee; padding:12px 10px; overflow:hidden;}
+main section .right_order .order_select .list {float:left; margin-bottom:12px; font-size:0.875rem;}
+main section .right_order .order_select .list .color {}
+main section .right_order .order_select .list .size {}
+main section .right_order .order_select .close {float:right;}
+main section .right_order .order_select .order_num {border:1px solid #ccc; display:flex; flex-flow:row nowrap; float:left; clear:both; margin-top:15px; border-radius:5px;}
+main section .right_order .order_select .order_num * {width:30px; height:30px; background-color:#fff;}
+main section .right_order .order_select .order_num #minus {}
+main section .right_order .order_select .order_num input[name=user_num] {text-align:center;}
+main section .right_order .order_select .order_num #plus {}
+main section .right_order .order_select .price {float:right; margin-top:25px; font-weight:500;}
+main section .right_order .order_select .price em {font-weight:600;}
 main section .right_order .total {display:flex; justify-content:space-between;}
 main section .right_order .total p {font-size:0.875rem;}
 main section .right_order .total .price {font-size:1.063rem; font-weight:700;}
