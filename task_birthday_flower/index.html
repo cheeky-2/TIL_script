@@ -7,20 +7,21 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./styles/reset.css">
     <link rel="stylesheet" href="./styles/index.css">
+    <script src="./scripts/data.js" defer></script>
     <script src="./scripts/index.js" defer></script>
 </head>
 <body>
     <div id="wrap">
         <div class="user_info">
-            <input type="number" name="year">
+            <input type="text" name="year">
             <em>년</em>
-            <input type="number" name="month">
+            <input type="text" name="month">
             <em>월</em>
-            <input type="number" name="day">
+            <input type="text" name="day">
             <em>일</em>
         </div>
         <button type="button" id="output_btn">탄생화와 꽃말은?</button>
-        <p><em class="month"><!-- 월 --></em>월의 탄생화는 <em class="flower"><!-- 꽃이름 --></em>이고, 꽃말은 <em class="flower_meaning"><!-- 꽃말 --></em>입니다.</p>
+        <p></p>
     </div>
 </body>
 </html>
