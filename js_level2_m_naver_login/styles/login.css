@@ -15,11 +15,11 @@ main .login_wrap h1 a {width:100%; height:100%; display:block;}
 main .login_wrap h1 a .blind {display:none;}
 main .login_wrap .login_inner {}
 main .login_wrap .login_inner #login_frm {}
-main .login_wrap .login_inner #login_frm .id_pw_wrap {border:1px solid #ddd; border-radius:8px; display:flex; flex-flow:column nowrap; overflow:hidden; margin:20px 0;}
+main .login_wrap .login_inner #login_frm .id_pw_wrap {border:1px solid #ddd; border-radius:8px; display:flex; flex-flow:column nowrap; overflow:hidden; margin:20px 0 10px;}
 main .login_wrap .login_inner #login_frm .id_pw_wrap input {padding:16px 10px;}
 main .login_wrap .login_inner #login_frm .id_pw_wrap input[name$=id] {border-bottom:1px solid #ddd;}
 main .login_wrap .login_inner #login_frm .id_pw_wrap input[name$=pw] {}
-main .login_wrap .login_inner #login_frm .error_msg {color:#f00; font-size:0.81rem; padding:10xp 0; line-height:1.4;}
+main .login_wrap .login_inner #login_frm .error_msg {color:#f00; font-size:0.81rem; padding:10xp 0; line-height:1.4; margin-bottom:20px;}
 main .login_wrap .login_inner #login_frm #login_btn {background:#aaa; color:#fff; width:100%; height:50px; border-radius:5px;}
 main .login_wrap .login_inner #login_frm .login_chk {margin:20px 0;}
 main .login_wrap .login_inner #login_frm .login_chk #chk_state {}
