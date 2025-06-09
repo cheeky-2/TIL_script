@@ -1,0 +1,53 @@
+header {
+    width:100%; min-width:320px;
+    height:98px;
+    background-color:rgb(69,101,245);
+    padding:0 30px; display:flex; flex-flow:row nowrap; justify-content:space-between; align-items:center;
+}
+header > h1 {background-color:blue;}
+header > h1 > a {font-size:1.375rem; color:#fff; font-weight:700;}
+header nav {}
+header nav .lnb_bg {
+    background-color:#eee; height:400px; width:100%;
+    position:absolute; left:0; top:98px;
+    border-bottom-left-radius:45px;
+    border-bottom-right-radius:45px;
+    z-index:10;
+    border-top:2px solid #000;
+}
+header nav .gnb {display:flex; flex-flow:row nowrap;background-color:aqua;}
+header nav .gnb > li {position:relative;}
+header nav .gnb > li > a {font-weight:700; color:#fff; line-height:98px; display:block; padding:0 60px; background-color:pink;}
+header nav .gnb > li > .lnb {position:absolute; z-index:20; 
+    border-right:1px solid #000; 
+    height:300px; width:100%;
+}
+header nav .gnb > li > .lnb > li {}
+header nav .gnb > li > .lnb > li a {}
+header .right_menu {display:flex; flex-flow:row nowrap;}
+header .right_menu .family {font-size:0.875rem; color:#fff; background-color:rgba(255,255,255,0.2); padding:5px 10px; border-radius:20px;}
+header .right_menu .lang {margin:0 20px;}
+header .right_menu .lang .active {}
+header .right_menu .lang a {font-size:0.875rem; color:#fff;}
+header .right_menu .m_nav {font-size:0.875rem; color:#fff;}
+header .right_menu .m_nav_wrap {
+    position:absolute; left:0; top:0; 
+    width:100%; height:100vh;
+    background-color:#fff;
+    z-index:30;
+}
+header .right_menu .m_nav_wrap * {color:#000;}
+header .right_menu .m_nav_wrap .top {
+    height:98px; padding:0 30px;
+    display:flex; justify-content:space-between; align-items:center;
+}
+header .right_menu .m_nav_wrap .top > h1 {}
+header .right_menu .m_nav_wrap .top > h1 a {font-size:1.375rem;}
+header .right_menu .m_nav_wrap .top .close {}
+header .right_menu .m_nav_wrap .m_nav_open {}
+header .right_menu .m_nav_wrap .m_nav_open .gnb {background:yellow;}
+header .right_menu .m_nav_wrap .m_nav_open .gnb > li {}
+header .right_menu .m_nav_wrap .m_nav_open .gnb > li > a {}
+header .right_menu .m_nav_wrap .m_nav_open .gnb > li > .lnb {}
+header .right_menu .m_nav_wrap .m_nav_open .gnb > li > .lnb > li {}
+header .right_menu .m_nav_wrap .m_nav_open .gnb > li > .lnb > li a {}
