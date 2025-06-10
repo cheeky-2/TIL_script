@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>미래계획 완성까지 남은 날짜|시간</title>
+    <style>
+        main {width:400px; height:700px; background:url(https://i.pinimg.com/736x/be/c2/ab/bec2ab246250436db72e3db60abc3c20.jpg) center/cover; margin:0 auto; text-align:center; padding:30px 0 0; border-radius:40px;}
+        main h1 {color:#f13;}
+        main #completion {display:block; margin:80px auto 40px; padding:20px; font-size:1.25rem; font-weight:600; border-radius:10px; background-color:#222; color:#f5f5f5; border:none;}
+        main #btn {padding:14px; font-size:1.25rem; border-radius:10px; background-color:#222; color:#f5f5f5; border:none;}
+        main .p_g {margin-top:230px; font-size:1.125rem; font-weight:600; color:#f5f5f5;}
+        main .p_g .date {}
+        main .p_g .date .date_c {font-size:1.5rem; color:#f11;}
+        main .p_g .time {}
+        main .p_g .time .time_c {font-size:1.5rem; color:#f11;}
+    </style>
+    <script src="./scripts/Math_ex.js" defer></script>
+</head>
+<body>
+    <main>
+        <h1>미래계획</h1>
+        <input type="date" name="completion" id="completion">
+        <button type="button" id="btn">남은 기간 보기</button>
+        <div class="p_g">
+            <p class="date">앞으로 남은 일수 :<span class="date_c"></span>일</p>
+            <p class="time">앞으로 남은 총 시간 :<span class="time_c"></span>시간</p>
+        </div>
+    </main>
+</body>
+</html>
