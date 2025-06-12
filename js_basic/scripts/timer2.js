@@ -19,10 +19,10 @@ function move(){
     slideContainer.style = `transform:translateX(${num}px);`
 } */
 const slideContainer = document.querySelector('.slide_container');
-slideContainer.style.transition = 'transform 1s';
 const slideTimer = setInterval(()=>{
+    slideContainer.style.transition = 'transform 1s';
     num++;
     if(num>2){num=0; slideContainer.style.transition = 'transform 0s';}
     slideContainer.style.transform = `translateX(-${400*num}px)`;
     console.log(`현재 num${num}, x축값:${400*num}`)
-},3000)
+},2000)
