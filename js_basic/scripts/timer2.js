@@ -1,4 +1,4 @@
-let num = -2;//0, 400, 800 출력을 위한 숫자변수
+let num = 2;//0, 400, 800 출력을 위한 숫자변수
 /* setInterval(numTimer,2000);
 function numTimer(){num++; console.log(num);} */
 // 이벤트의 다양한 함수 호출방법(콜백, 화살표함수, 익명함수 순서)
@@ -20,9 +20,9 @@ function move(){
 } */
 const slideContainer = document.querySelector('.slide_container');
 const slideTimer = setInterval(()=>{
-    num++;
+    num--;
     slideContainer.style.transition = 'transform 1s';
-    if(num>0){num=-2; slideContainer.style.transition = 'transform 0s';}
-    slideContainer.style.transform = `translateX(${400*num}px)`;
+    if(num<0){num=2; slideContainer.style.transition = 'transform 0.1s';}
+    slideContainer.style.transform = `translateX(-${400*num}px)`;
     console.log(`현재 num${num}, x축값:${400*num}`)
 },2000)
