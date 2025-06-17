@@ -47,7 +47,7 @@ const kurlyDB = [
         review: 43,
     },
     {
-        src: './images/kurly_007.jpg',
+        src: './images/kurly_007.jpeg',
         name: '[빙그레] 바나나맛 우유 240ml',
         summary: '달콤한 국민 간식 바나나맛',
         price: 1300,
