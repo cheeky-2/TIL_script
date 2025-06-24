@@ -47,17 +47,89 @@
     </footer>
     
     <script>
-        const bg2 = document.querySelector('.bg2');
+        const bg = document.querySelectorAll('.bg');
+        const h1 = document.querySelectorAll('.txt h1');
+        const p = document.querySelectorAll('.txt p');
+        console.log(bg,h1,p);
+        //p.style = 'opacity:0;'
         document.addEventListener("DOMContentLoaded", (event) => {
             gsap.registerPlugin(ScrollTrigger)
             // gsap code here!
-            ScrollTrigger.create({
-                trigger:'.bg2',
-                markers:true,
-                onEnter:()=>{
-                    bg2.classList.add('page');
-                },
-            })
+            /* for(let i of bg){
+                gsap.fromTo(i,{
+                    opacity:0,
+                },{
+                    scrollTrigger:{
+                        trigger:i,
+                        markers:true,
+                    },
+                    opacity:1,
+                    duration:2,
+                });
+                console.log(i);
+            } */ // 이건 나중에 시험삼아 해보자
+            for(let i=1; i<5; i++){
+                gsap.fromTo(bg[i],{
+                    opacity:0,
+                },{
+                    scrollTrigger:{
+                        trigger:bg[i],
+                        markers:true,
+                    },
+                    opacity:1,
+                    duration:2,
+                });
+                gsap.fromTo(h1[i],{
+                    y:150,
+                    opacity:0,
+                },{
+                    scrollTrigger:{
+                        trigger:bg[i],
+                        markers:true,
+                    },
+                    y:0,
+                    opacity:1,
+                    duration:1,
+                });
+                    for(let e=0; i<4; i++){
+                        /* gsap.fromTo(bg[i],{
+                        opacity:0,
+                    },{
+                        scrollTrigger:{
+                            trigger:bg[i],
+                            markers:true,
+                        },
+                        opacity:1,
+                        duration:2,
+                    });
+                    gsap.fromTo(h1[i],{
+                        y:150,
+                        opacity:0,
+                    },{
+                        scrollTrigger:{
+                            trigger:bg[i],
+                            markers:true,
+                        },
+                        y:0,
+                        opacity:1,
+                        duration:1,
+                    }); */
+                    gsap.fromTo(p[e],{
+                        y:150,
+                        opacity:0,
+                    },{
+                        scrollTrigger:{
+                            trigger:bg[i],
+                            markers:true,
+                        },
+                        y:0,
+                        opacity:1,
+                        duration:1,
+                        delay:0.6,
+                    });
+                    console.log(p);
+                };
+            }
         });
     </script>
 </body>

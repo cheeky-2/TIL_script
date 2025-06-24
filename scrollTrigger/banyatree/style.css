@@ -21,8 +21,8 @@ main .bg2 {background-image:url(images/main_con2_bg.jpg)}
 main .bg3 {background-image:url(images/main_con3_bg.jpg)}
 main .bg4 {background-image:url(images/main_con5_bg-.jpg)}
 main .bg .txt {padding:100px 100px 0;}
-main .bg .txt h1 {font-size:3rem; color:#fff; text-transform:uppercase; font-weight:700; animation:txth1 1s both;}
-main .bg .txt p {color:#eee; line-height:1.8; margin-top:20px; animation:txtp 1s 0.5s both;}
+main .bg .txt h1 {font-size:3rem; color:#fff; text-transform:uppercase; font-weight:700;}
+main .bg .txt p {color:#eee; line-height:1.8; margin-top:20px;}
 main .bg1 .txt {padding:0; animation:firstpagetxt 2s both;}
 main .bg1 .txt h1 {line-height:100vh;}
 footer {display:flex; justify-content:space-around; align-items:center;background:#000; width:100%; height:150px;}
@@ -36,16 +36,4 @@ footer .copy {color:#aaa; font-size:0.91rem; text-transform:uppercase;}
 @keyframes firstpagetxt {
     0% {transform:scale(1.2); opacity:0;}
     100% {transform:scale(1); opacity:1;}
-}
-@keyframes txth1 {
-    0% {transform:translateY(20px);}
-    100% {transform:translateY(0);}
-}
-@keyframes txtp {
-    0% {transform:translateY(20px);}
-    100% {transform:translateY(0);}
-}
-@keyframes light {
-    0% {opacity:0;}
-    100% {opacity:1;}
 }
