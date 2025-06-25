@@ -67,14 +67,42 @@
                     duration:2,
                 });
                 console.log(i);
-            } */ // 이건 나중에 시험삼아 해보자
+            }
+            for(let i of h1){
+                gsap.fromTo(i,{
+                    y:150,
+                    opacity:0,
+                },{
+                    scrollTrigger:{
+                        trigger:i,
+                        markers:true,
+                    },
+                    opacity:1,
+                    duration:2,
+                    y:0,
+                });
+            }
+            for(let i of p){
+                gsap.fromTo(i,{
+                    y:150,
+                    opacity:0,
+                },{
+                    scrollTrigger:{
+                        trigger:i,
+                        markers:true,
+                    },
+                    opacity:1,
+                    duration:2,
+                    delay:1,
+                    y:0,
+                });
+            } */
             for(let i=1; i<5; i++){
                 gsap.fromTo(bg[i],{
                     opacity:0,
                 },{
                     scrollTrigger:{
                         trigger:bg[i],
-                        markers:true,
                     },
                     opacity:1,
                     duration:2,
@@ -85,50 +113,23 @@
                 },{
                     scrollTrigger:{
                         trigger:bg[i],
-                        markers:true,
                     },
                     y:0,
                     opacity:1,
                     duration:1,
                 });
-                    for(let e=0; i<4; i++){
-                        /* gsap.fromTo(bg[i],{
-                        opacity:0,
-                    },{
-                        scrollTrigger:{
-                            trigger:bg[i],
-                            markers:true,
-                        },
-                        opacity:1,
-                        duration:2,
-                    });
-                    gsap.fromTo(h1[i],{
-                        y:150,
-                        opacity:0,
-                    },{
-                        scrollTrigger:{
-                            trigger:bg[i],
-                            markers:true,
-                        },
-                        y:0,
-                        opacity:1,
-                        duration:1,
-                    }); */
-                    gsap.fromTo(p[e],{
-                        y:150,
-                        opacity:0,
-                    },{
-                        scrollTrigger:{
-                            trigger:bg[i],
-                            markers:true,
-                        },
-                        y:0,
-                        opacity:1,
-                        duration:1,
-                        delay:0.6,
-                    });
-                    console.log(p);
-                };
+                gsap.fromTo(p[i-1],{
+                    y:150,
+                    opacity:0,
+                },{
+                    scrollTrigger:{
+                        trigger:bg[i],
+                    },
+                    y:0,
+                    opacity:1,
+                    duration:1,
+                    delay:0.5,
+                });
             }
         });
     </script>
